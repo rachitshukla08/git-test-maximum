@@ -29,4 +29,7 @@ public class FindMaximum <T extends Comparable<T>>
 		this.max = args[args.length-1];
 		return max;
 	}
+	public void printMax() {
+		System.out.println(max);
+	}
 }
