@@ -6,7 +6,7 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 /**
- * Unit test for simple App.
+ * Test for maximum
  */
 public class TestMaximum 
 {
@@ -14,21 +14,21 @@ public class TestMaximum
     @Test
     public void givenMaxAtPositionOne_ShouldReturnSameNumber()
     {
-        int max = FindMaximum.findMaximum(5, 3, 1);
-        assertEquals(5, max);
+        Float max = FindMaximum.findMaximum(5.5f, 3.2f, 1.8f);
+        assertEquals(5.5, max, 0.0);
     }
     
     @Test
     public void givenMaxAtPositionTwo_ShouldReturnSameNumber()
     {
-        int max = FindMaximum.findMaximum(3, 5, 1);
-        assertEquals(5, max);
+        Float max = FindMaximum.findMaximum(3.2f , 5.5f , 1.8f);
+        assertEquals(5.5, max, 0.0);
     }
     
     @Test
     public void givenMaxAtPositionThree_ShouldReturnSameNumber()
     {
-        int max = FindMaximum.findMaximum(3, 1, 5);
-        assertEquals(5, max);
+        Float max = FindMaximum.findMaximum(3.2f, 1.5f, 5.5f);
+        assertEquals(5.5, max, 0.0);
     }
 }
