@@ -1,34 +1,32 @@
 package com.capgemini.genericstestmaximum;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-
 import org.junit.Test;
 
 /**
- * Test for maximum
+ * Test for maximum among three 
  */
 public class TestMaximum 
 {
 	
     @Test
-    public void givenMaxAtPositionOne_ShouldReturnSameNumber()
+    public void givenMaxAtPositionOne_ShouldReturnSameString()
     {
-        Float max = FindMaximum.findMaximum(5.5f, 3.2f, 1.8f);
-        assertEquals(5.5, max, 0.0);
+    	String max = FindMaximum.findMaximum("Peach","Apple","Banana");
+        assertEquals("Peach", max);
     }
     
     @Test
-    public void givenMaxAtPositionTwo_ShouldReturnSameNumber()
+    public void givenMaxAtPositionTwo_ShouldReturnSameString()
     {
-        Float max = FindMaximum.findMaximum(3.2f , 5.5f , 1.8f);
-        assertEquals(5.5, max, 0.0);
+    	String max = FindMaximum.findMaximum("Apple", "Peach","Banana");
+    	assertEquals("Peach", max);
     }
     
     @Test
-    public void givenMaxAtPositionThree_ShouldReturnSameNumber()
+    public void givenMaxAtPositionThree_ShouldReturnSameString()
     {
-        Float max = FindMaximum.findMaximum(3.2f, 1.5f, 5.5f);
-        assertEquals(5.5, max, 0.0);
+    	String max = FindMaximum.findMaximum("Apple","Banana", "Peach");
+    	assertEquals("Peach", max);
     }
 }
