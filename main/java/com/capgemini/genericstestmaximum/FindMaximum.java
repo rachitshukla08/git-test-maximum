@@ -1,23 +1,21 @@
 package com.capgemini.genericstestmaximum;
 
-import java.util.Scanner;
+import java.util.Arrays;
 
-/**
- * Hello world!
- *
- */
 public class FindMaximum <T extends Comparable<T>>
 {
-	T x, y, z;
 	T max;
-	
-	public FindMaximum(T x, T y, T z) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
+	/**
+	 * Default Constructor
+	 */
+	public FindMaximum() {
+		
 	}
+	/**
+	 * @return this.maximum
+	 */
 	public T maximum() {
-		return this.findMaximum(x, y, z);
+		return this.max;
 	}
 	/**
 	 * @param x
@@ -26,12 +24,9 @@ public class FindMaximum <T extends Comparable<T>>
 	 * @return 
 	 * @return maximum
 	 */
-	public T findMaximum(T x,T y,T z) {
-		max = x;
-		if(y.compareTo(max)>0)
-			max = y;
-		if(z.compareTo(max)>0)
-			max = z;
+	public T findMaximum(T ... args) {
+		Arrays.sort(args);
+		this.max = args[args.length-1];
 		return max;
 	}
 }
