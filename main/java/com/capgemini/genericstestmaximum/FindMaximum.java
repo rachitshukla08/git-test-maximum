@@ -12,10 +12,11 @@ public class FindMaximum
 	 * @param x
 	 * @param y
 	 * @param z
+	 * @return 
 	 * @return maximum
 	 */
-	public static String findMaximum(String x,String y,String z) {
-		String max = x;
+	public static <T extends Comparable<T>> T findMaximum(T x,T y,T z) {
+		T max = x;
 		if(y.compareTo(max)>0)
 			max = y;
 		if(z.compareTo(max)>0)
@@ -25,13 +26,13 @@ public class FindMaximum
     public static void main( String[] args )
     {
     	Scanner sc = new Scanner(System.in);
-        System.out.println("Enter 3 integers to find maximum");
-        System.out.println("Enter first String");
+        System.out.println("Enter 3 inputs to find maximum");
+        System.out.println("Enter first input");
         String x = sc.nextLine();
-        System.out.println("Enter second String");
+        System.out.println("Enter second input");
         String y = sc.nextLine();
-        System.out.println("Enter third String");
+        System.out.println("Enter third input");
         String z = sc.nextLine();
-        System.out.println(findMaximum(x,y,z));
+        System.out.println("Maximum:"+findMaximum(x,y,z));
     }
 }

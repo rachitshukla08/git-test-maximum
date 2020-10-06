@@ -4,29 +4,63 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
 /**
- * Test for maximum among three 
+ * Test for maximum among three
  */
-public class TestMaximum 
-{
+public class TestMaximum {
+	@Test
+	public void givenMaxIntAtPositionOne_ShouldReturnSameNumber() {
+		int max = FindMaximum.findMaximum(5, 3, 1);
+		assertEquals(5, max);
+	}
+
+	@Test
+	public void givenMaxIntAtPositionTwo_ShouldReturnSameNumber() {
+		int max = FindMaximum.findMaximum(3, 5, 1);
+		assertEquals(5, max);
+	}
+
+	@Test
+	public void givenMaxIntAtPositionThree_ShouldReturnSameNumber() {
+		int max = FindMaximum.findMaximum(3, 1, 5);
+		assertEquals(5, max);
+	}
 	
-    @Test
-    public void givenMaxAtPositionOne_ShouldReturnSameString()
+	@Test
+    public void givenMaxFloatAtPositionOne_ShouldReturnSameNumber()
     {
-    	String max = FindMaximum.findMaximum("Peach","Apple","Banana");
-        assertEquals("Peach", max);
+        Float max = FindMaximum.findMaximum(5.5f, 3.2f, 1.8f);
+        assertEquals(5.5, max, 0.0);
     }
     
     @Test
-    public void givenMaxAtPositionTwo_ShouldReturnSameString()
+    public void givenMaxFloatAtPositionTwo_ShouldReturnSameNumber()
     {
-    	String max = FindMaximum.findMaximum("Apple", "Peach","Banana");
-    	assertEquals("Peach", max);
+        Float max = FindMaximum.findMaximum(3.2f , 5.5f , 1.8f);
+        assertEquals(5.5, max, 0.0);
     }
     
     @Test
-    public void givenMaxAtPositionThree_ShouldReturnSameString()
+    public void givenMaxFloatAtPositionThree_ShouldReturnSameNumber()
     {
-    	String max = FindMaximum.findMaximum("Apple","Banana", "Peach");
-    	assertEquals("Peach", max);
+        Float max = FindMaximum.findMaximum(3.2f, 1.5f, 5.5f);
+        assertEquals(5.5, max, 0.0);
     }
+
+	@Test
+	public void givenMaxAtPositionOne_ShouldReturnSameString() {
+		String max = FindMaximum.findMaximum("Peach", "Apple", "Banana");
+		assertEquals("Peach", max);
+	}
+
+	@Test
+	public void givenMaxAtPositionTwo_ShouldReturnSameString() {
+		String max = FindMaximum.findMaximum("Apple", "Peach", "Banana");
+		assertEquals("Peach", max);
+	}
+
+	@Test
+	public void givenMaxAtPositionThree_ShouldReturnSameString() {
+		String max = FindMaximum.findMaximum("Apple", "Banana", "Peach");
+		assertEquals("Peach", max);
+	}
 }
